@@ -1,0 +1,10 @@
+<div class="grid sidebar-content col-" [ngClass]="{'expanded': isExpanded}">
+  <ul>
+    <li *ngFor="let item of items">
+      <div class="icon-container">
+        <i [class]="item.icon"></i>
+      </div>
+      <span *ngIf="isExpanded">{{ item.label }}</span>
+    </li>
+  </ul>
+</div>

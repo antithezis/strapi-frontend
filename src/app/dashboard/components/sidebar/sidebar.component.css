@@ -1,0 +1,71 @@
+.sidebar-content {
+    background-color: #f4f4f4;
+    width: 50px;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 10; /* para asegurarse de que esté por encima de otros contenidos */
+
+    transition: width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.p-overlay {
+    background-color: rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5; /* debajo del sidebar, pero por encima de otros contenidos */
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-content li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-content li:hover {
+    background-color: #f0f0f0;
+}
+
+
+.sidebar-content li i {
+    margin-right: 1rem;
+    width: 2rem; /* Establecer un ancho fijo puede ayudar a que los íconos no se muevan */
+}
+
+.icon-container {
+    display: inline-block;
+    width: 24px;  /* Ajusta según necesites */
+    text-align: center;
+    margin-right: 15px;  /* Ajusta según tu preferencia */
+}
+
+.sidebar-content li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-content {
+    width: 50px; /* Ajusta según tus necesidades para el modo colapsado */
+    transition: width 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+.sidebar-content.expanded {
+    width: 200px; /* Ajusta según tus necesidades para el modo expandido */
+    background-color: #fff;  /* o cualquier otro color que prefieras */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* para darle un poco de profundidad */
+}
